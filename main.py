@@ -63,6 +63,7 @@ FROM
 	tb_unidade
 
 	where categoria = '2'
+	order by nm_unidade
                 LIMIT %s OFFSET %s
             """
             cursor.execute(query, (limit, offset))
